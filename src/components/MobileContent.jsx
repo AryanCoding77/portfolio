@@ -14,16 +14,19 @@ const MobileContent = () => {
                         className="text-2xl font-bold text-white tracking-wider"
                         style={{ fontFamily: "'Orbitron', sans-serif" }}
                     >
-                        ARIES
+                        ARYAN
                     </h3>
                     <p className="text-white text-sm leading-relaxed" style={{ 
                         fontFamily: "'Inter', sans-serif",
                         textShadow: '0 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)'
                     }}>
-                        The Commander of Stars, leading the charge in the intergalactic war against entropy.
+                        Young full-stack developer crafting innovative web applications with cutting-edge technologies and creative solutions.
                     </p>
-                    <button className="relative z-50 border-2 border-white/30 text-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all text-sm font-semibold tracking-wide w-full cursor-pointer">
-                        Open Collection
+                    <button 
+                        onClick={() => navigate('/projects')}
+                        className="relative z-50 border-2 border-white/30 text-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all text-sm font-semibold tracking-wide w-full cursor-pointer"
+                    >
+                        View Projects
                     </button>
                 </div>
             </div>
