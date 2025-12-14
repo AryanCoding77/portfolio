@@ -253,7 +253,9 @@ const Projects = () => {
 
                                     {/* View Project Button */}
                                     <motion.a
-                                        href="#"
+                                        href={selectedProject.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center gap-3 border-2 border-red-500 bg-red-500/10 text-white px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-red-500 hover:border-red-500 transition-all text-sm md:text-base font-semibold tracking-wide group"
                                         style={{ fontFamily: "'Orbitron', sans-serif" }}
                                         initial={{ y: 20, opacity: 0 }}

@@ -31,21 +31,21 @@ const StatsBox = () => {
                 <div className="flex items-center justify-around gap-4 md:gap-8 pr-2 md:pr-4">
                     <div className="text-center">
                         <div className="text-2xl md:text-4xl font-bold text-black" style={{ fontFamily: "'Orbitron', sans-serif" }}>
-                            <AnimatedCounter end={567} duration={2} />
+                            <AnimatedCounter end={5} duration={2} suffix="+" />
                         </div>
-                        <div className="text-gray-600 text-[10px] md:text-xs mt-1">zodiac collections</div>
+                        <div className="text-gray-600 text-[10px] md:text-xs mt-1">years experience</div>
                     </div>
                     <div className="text-center">
                         <div className="text-2xl md:text-4xl font-bold text-black" style={{ fontFamily: "'Orbitron', sans-serif" }}>
-                            <AnimatedCounter end={5.3} duration={2} decimals={1} suffix="K" />
+                            <AnimatedCounter end={5000} duration={2} suffix="+" />
                         </div>
-                        <div className="text-gray-600 text-[10px] md:text-xs mt-1">community members</div>
+                        <div className="text-gray-600 text-[10px] md:text-xs mt-1">hours of work</div>
                     </div>
                     <div className="text-center">
                         <div className="text-2xl md:text-4xl font-bold text-black" style={{ fontFamily: "'Orbitron', sans-serif" }}>
-                            <AnimatedCounter end={8.3} duration={2} decimals={1} suffix="K" />
+                            <AnimatedCounter end={4} duration={2} suffix="+" />
                         </div>
-                        <div className="text-gray-600 text-[10px] md:text-xs mt-1">zodiac cards</div>
+                        <div className="text-gray-600 text-[10px] md:text-xs mt-1">big projects</div>
                     </div>
                 </div>
             </div>

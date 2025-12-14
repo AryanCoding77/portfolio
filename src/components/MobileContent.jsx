@@ -35,21 +35,21 @@ const MobileContent = () => {
             <div className="md:hidden flex justify-around relative z-30 mt-8 mb-24">
                 <div className="text-center">
                     <div className="text-3xl font-bold text-white" style={{ fontFamily: "'Orbitron', sans-serif" }}>
-                        <AnimatedCounter end={567} duration={2} />
+                        <AnimatedCounter end={5} duration={2} suffix="+" />
                     </div>
-                    <div className="text-white/70 text-xs mt-1">collections</div>
+                    <div className="text-white/70 text-xs mt-1">years exp</div>
                 </div>
                 <div className="text-center">
                     <div className="text-3xl font-bold text-white" style={{ fontFamily: "'Orbitron', sans-serif" }}>
-                        <AnimatedCounter end={5.3} duration={2} decimals={1} suffix="K" />
+                        <AnimatedCounter end={5000} duration={2} suffix="+" />
                     </div>
-                    <div className="text-white/70 text-xs mt-1">members</div>
+                    <div className="text-white/70 text-xs mt-1">hours work</div>
                 </div>
                 <div className="text-center">
                     <div className="text-3xl font-bold text-white" style={{ fontFamily: "'Orbitron', sans-serif" }}>
-                        <AnimatedCounter end={8.3} duration={2} decimals={1} suffix="K" />
+                        <AnimatedCounter end={4} duration={2} suffix="+" />
                     </div>
-                    <div className="text-white/70 text-xs mt-1">cards</div>
+                    <div className="text-white/70 text-xs mt-1">projects</div>
                 </div>
             </div>
 

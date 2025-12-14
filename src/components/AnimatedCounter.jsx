@@ -1,9 +1,36 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const AnimatedCounter = ({ end, duration = 2, suffix = '', decimals = 0 }) => {
     const [count, setCount] = useState(0);
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const counterRef = useRef(null);
 
     useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        setHasAnimated(true);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        if (counterRef.current) {
+            observer.observe(counterRef.current);
+        }
+
+        return () => {
+            if (counterRef.current) {
+                observer.unobserve(counterRef.current);
+            }
+        };
+    }, [hasAnimated]);
+
+    useEffect(() => {
+        if (!hasAnimated) return;
+
         let startTime;
         let animationFrame;
 
@@ -28,7 +55,7 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '', decimals = 0 }) => {
                 cancelAnimationFrame(animationFrame);
             }
         };
-    }, [end, duration]);
+    }, [end, duration, hasAnimated]);
 
     const formatNumber = (num) => {
         if (decimals > 0) {
@@ -37,7 +64,7 @@ const AnimatedCounter = ({ end, duration = 2, suffix = '', decimals = 0 }) => {
         return Math.floor(num).toString();
     };
 
-    return <>{formatNumber(count)}{suffix}</>;
+    return <span ref={counterRef}>{formatNumber(count)}{suffix}</span>;
 };
 
 export default AnimatedCounter;
